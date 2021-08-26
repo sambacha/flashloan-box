@@ -1,7 +1,7 @@
 {
   "name": "aave-flashloans",
   "description": "A library for developing Aave flash loans",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "AGPLv3",
   "author": "Aave",
   "homepage": "https://docs.aave.com/developers/tutorials/performing-a-flash-loan/...-with-truffle",
