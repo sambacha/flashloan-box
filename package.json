@@ -5,7 +5,7 @@
   "license": "AGPLv3",
   "author": "Aave",
   "homepage": "https://docs.aave.com/developers/tutorials/performing-a-flash-loan/...-with-truffle",
-  "repository": "https://github.com/aave/flashloan-box",
+  "repository": "https://github.com/sambacha/flashloan-box",
   "files": [
     "/contracts/**/*.sol",
     "/build/contracts/*.json",
@@ -23,7 +23,6 @@
     "fix": "npx gts fix"
   },
   "dependencies": {
-    "openzeppelin-solidity/contracts": "3.0.0",
     "openzeppelin-solidity": "^3.3.0"
   },
   "devDependencies": {
