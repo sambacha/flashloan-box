@@ -33,7 +33,7 @@ abstract contract FlashLoanReceiverBase is IFlashLoanReceiver, Withdrawable {
         uint256 _amount
     ) internal {
         if (_reserve == ethAddress) {
-            (bool success, ) = _destination.call{value: _amount}("");
+            (bool success, ) = _destination.call{ value: _amount }("");
             require(success == true, "Couldn't transfer ETH");
             return;
         }
