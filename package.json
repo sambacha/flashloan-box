@@ -17,6 +17,7 @@
     "coverage": "npx hardhat coverage",
     "test": "npx hardhat test",
     "lint": "npx gts lint",
+    "fmt-sol": "npx prettier --config prettier.config.js --write '**/*.sol'",
     "format": "npx prettier --config prettier.config.js --write .",
     "clean": "npx gts clean",
     "fix": "npx gts fix"

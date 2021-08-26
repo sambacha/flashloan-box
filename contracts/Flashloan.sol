@@ -40,8 +40,9 @@ contract Flashloan is FlashLoanReceiverBase {
         bytes memory data = "";
         uint256 amount = 1 ether;
 
-        ILendingPool lendingPool =
-            ILendingPool(addressesProvider.getLendingPool());
+        ILendingPool lendingPool = ILendingPool(
+            addressesProvider.getLendingPool()
+        );
         lendingPool.flashLoan(address(this), _asset, amount, data);
     }
 }
