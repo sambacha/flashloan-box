@@ -1,14 +1,14 @@
-pragma solidity >=0.6.0 <0.8.0;
+pragma solidity ^0.6.6;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.3/contracts/token/ERC20/ERC20.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.3/contracts/token/ERC20/SafeERC20.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.3/contracts/access/Ownable.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/SafeERC20.sol";
+import "openzeppelin-solidity/contracts/access/Ownable.sol";
 
 /**
     Ensures that any contract that inherits from this contract is able to
     withdraw funds that are accidentally received or stuck.
  */
-
+ 
 contract Withdrawable is Ownable {
     using SafeERC20 for ERC20;
     address constant ETHER = address(0);
@@ -16,7 +16,7 @@ contract Withdrawable is Ownable {
     event LogWithdraw(
         address indexed _from,
         address indexed _assetAddress,
-        uint256 amount
+        uint amount
     );
 
     /**
@@ -24,7 +24,7 @@ contract Withdrawable is Ownable {
      * @param _assetAddress Asset to be withdrawn.
      */
     function withdraw(address _assetAddress) public onlyOwner {
-        uint256 assetBalance;
+        uint assetBalance;
         if (_assetAddress == ETHER) {
             address self = address(this); // workaround for a possible solidity bug
             assetBalance = self.balance;

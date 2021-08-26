@@ -23,7 +23,8 @@
     "fix": "npx gts fix"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "3.0.0"
+    "openzeppelin-solidity/contracts": "3.0.0",
+    "openzeppelin-solidity": "^3.3.0"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "2.0.2",
